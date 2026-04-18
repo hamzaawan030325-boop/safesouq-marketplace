@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": "u_1",
+      "name": "Ali Khan",
+      "email": "seller@safesouq.test",
+      "password": "secret123",
+      "role": "seller",
+      "status": "active",
+      "createdAt": "2026-04-18T09:00:00.000Z"
+    },
+    {
+      "id": "u_buyer",
+      "name": "Sara Malik",
+      "email": "buyer@safesouq.test",
+      "password": "secret123",
+      "role": "buyer",
+      "status": "active",
+      "createdAt": "2026-04-18T09:00:00.000Z"
+    }
+  ],
+  "sellers": [
+    {
+      "id": "s_1",
+      "userId": "u_1",
+      "shopName": "Roam Supply Co",
+      "riskScore": 21,
+      "status": "verified"
+    },
+    {
+      "id": "s_2",
+      "userId": "u_2",
+      "shopName": "A-One Imports",
+      "riskScore": 92,
+      "status": "watchlist"
+    }
+  ],
+  "products": [
+    {
+      "id": "p_1",
+      "title": "Travel Backpack Pro",
+      "slug": "travel-backpack-pro",
+      "category": "travel",
+      "price": 55,
+      "sellerId": "u_1",
+      "stock": 120,
+      "description": "Water-resistant backpack with laptop sleeve.",
+      "status": "approved",
+      "createdAt": "2026-04-18T09:00:00.000Z"
+    },
+    {
+      "id": "p_2",
+      "title": "Wireless Gaming Headset",
+      "slug": "wireless-gaming-headset",
+      "category": "electronics",
+      "price": 64,
+      "sellerId": "u_1",
+      "stock": 85,
+      "description": "Low latency headset with noise cancellation.",
+      "status": "approved",
+      "createdAt": "2026-04-18T09:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "o_1",
+      "buyerId": "u_buyer",
+      "sellerId": "u_1",
+      "items": [
+        {
+          "productId": "p_1",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 79,
+      "status": "in_transit",
+      "paymentStatus": "escrow_hold",
+      "shippingStatus": "processing",
+      "createdAt": "2026-04-18T09:00:00.000Z"
+    }
+  ],
+  "piracyReports": [
+    {
+      "id": "r_1",
+      "productId": "p_2",
+      "reportType": "copied_media",
+      "status": "open"
+    }
+  ],
+  "disputes": [
+    {
+      "id": "d_1",
+      "orderId": "o_1",
+      "reason": "item_not_original",
+      "status": "review"
+    }
+  ]
+}
