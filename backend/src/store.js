@@ -3,6 +3,12 @@ const path = require("path");
 
 const DATA_FILE = path.join(__dirname, "..", "data", "store.json");
 
+function badRequest(message) {
+  const error = new Error(message);
+  error.statusCode = 400;
+  throw error;
+}
+
 function readStore() {
   const raw = fs.readFileSync(DATA_FILE, "utf8");
   return JSON.parse(raw);
@@ -34,6 +40,10 @@ function getProduct(idOrSlug) {
 function addProduct(payload) {
   const store = readStore();
   const title = String(payload.title || "Untitled Product");
+  if (title.trim().length < 3) {
+    badRequest("Product title kam az kam 3 letters ka hona chahiye.");
+  }
+
   const product = {
     id: createId("p"),
     title,
@@ -68,10 +78,24 @@ function approveProduct(productId) {
 
 function addUser(payload) {
   const store = readStore();
+  const email = String(payload.email || "").trim().toLowerCase();
+
+  if (!email || !email.includes("@")) {
+    badRequest("Valid email required.");
+  }
+
+  if (String(payload.password || "").length < 6) {
+    badRequest("Password kam az kam 6 characters ka hona chahiye.");
+  }
+
+  if (store.users.some((user) => String(user.email).toLowerCase() === email)) {
+    badRequest("Is email se account pehle se mojood hai.");
+  }
+
   const user = {
     id: createId("u"),
     name: payload.name || "New User",
-    email: payload.email,
+    email,
     password: payload.password || "secret123",
     role: String(payload.role || "buyer").toLowerCase(),
     status: "active",
@@ -85,7 +109,11 @@ function addUser(payload) {
 
 function loginUser(payload) {
   const store = readStore();
-  return store.users.find((user) => user.email === payload.email && user.password === payload.password);
+  return store.users.find((user) =>
+    String(user.email).toLowerCase() === String(payload.email || "").trim().toLowerCase() &&
+    user.password === payload.password &&
+    (!payload.role || user.role === String(payload.role).toLowerCase())
+  );
 }
 
 function addOrder(payload) {
