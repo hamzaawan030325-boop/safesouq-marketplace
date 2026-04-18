@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Admin Control Room | SafeSouq</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">S</span>
+      <span>
+        <strong>SafeSouq</strong>
+        <small>Admin Control Room</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Marketplace</a>
+      <a href="seller.html">Seller Hub</a>
+      <a href="admin.html">Admin</a>
+      <a href="auth.html">Auth</a>
+    </nav>
+    <a class="ghost-btn link-btn" href="index.html#security">Security Policy</a>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="page-hero compact">
+      <div>
+        <p class="eyebrow">Moderation Center</p>
+        <h1>Piracy reports, disputes aur risky sellers ko fast review karne ke liye admin workspace.</h1>
+      </div>
+      <div class="quick-stats">
+        <div><strong>146</strong><span>Items in review</span></div>
+        <div><strong>18</strong><span>High-risk sellers</span></div>
+        <div><strong>7 min</strong><span>Average triage time</span></div>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel span-2">
+        <div class="panel-head">
+          <h2>Moderation queues</h2>
+          <span class="status-pill warn">Live</span>
+        </div>
+        <div class="table-like">
+          <div class="table-row head"><span>Queue</span><span>Open</span><span>SLA</span></div>
+          <div class="table-row"><span>New listings</span><span>52</span><span>45 min</span></div>
+          <div class="table-row"><span>Piracy complaints</span><span>18</span><span>20 min</span></div>
+          <div class="table-row"><span>Seller appeals</span><span>12</span><span>4 hr</span></div>
+          <div class="table-row"><span>Disputes</span><span>64</span><span>2 hr</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Fraud engine</h2>
+          <span class="status-pill success">Stable</span>
+        </div>
+        <div class="metric-stack">
+          <div><strong>99.2%</strong><span>Suspicious listing recall</span></div>
+          <div><strong>0.8%</strong><span>False positive rate</span></div>
+          <div><strong>34</strong><span>Auto-blocked accounts today</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Priority piracy reports</h2>
+          <span class="status-pill warn">Urgent</span>
+        </div>
+        <div class="list-block">
+          <div class="list-row"><strong>Nike logo misuse</strong><span>Seller: A-One Imports</span></div>
+          <div class="list-row"><strong>Fake cosmetic packaging</strong><span>Seller: Glow Mart</span></div>
+          <div class="list-row"><strong>Copied listing media</strong><span>Seller: Galaxy Deals</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Dispute queue</h2>
+          <span class="status-pill">Evidence review</span>
+        </div>
+        <div class="list-block">
+          <div class="list-row"><strong>#DP-191</strong><span>Item not original</span></div>
+          <div class="list-row"><strong>#DP-188</strong><span>Wrong size delivered</span></div>
+          <div class="list-row"><strong>#DP-180</strong><span>Parcel tampered</span></div>
+        </div>
+      </article>
+
+      <article class="panel span-2">
+        <div class="panel-head">
+          <h2>Risky sellers snapshot</h2>
+          <span class="status-pill warn">Action needed</span>
+        </div>
+        <div class="table-like">
+          <div class="table-row head"><span>Seller</span><span>Risk score</span><span>Status</span></div>
+          <div class="table-row"><span>A-One Imports</span><span>92</span><span>Freeze payouts</span></div>
+          <div class="table-row"><span>Glow Mart</span><span>87</span><span>Manual review</span></div>
+          <div class="table-row"><span>Galaxy Deals</span><span>81</span><span>Listing takedown</span></div>
+          <div class="table-row"><span>Urban Luxe</span><span>74</span><span>Watchlist</span></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Admin operations demo for SafeSouq.</p>
+    <div class="footer-links">
+      <a href="architecture.md">Architecture</a>
+      <a href="api-spec.md">API spec</a>
+      <a href="seller.html">Seller</a>
+    </div>
+  </footer>
+</body>
+</html>

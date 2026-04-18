@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: safesouq-marketplace
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: node backend/src/server.js

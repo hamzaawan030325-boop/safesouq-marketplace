@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>SafeSouq Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">S</span>
+      <span>
+        <strong>SafeSouq</strong>
+        <small>Secure Commerce OS</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#marketplace">Marketplace</a>
+      <a href="seller.html">Seller Hub</a>
+      <a href="admin.html">Admin</a>
+      <a href="auth.html">Login</a>
+      <a href="index.html#security">Security</a>
+    </nav>
+    <a class="ghost-btn link-btn" href="seller.html">Launch Demo</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Daraz style marketplace + app-ready experience</p>
+        <h1>Ek secure multi-vendor platform jahan customer khareede aur seller apna store chalay.</h1>
+        <p class="lead">
+          SafeSouq ek marketplace starter hai jisme buyer storefront, seller dashboard, admin moderation,
+          escrow-style payouts, brand protection, piracy reporting aur PWA-ready app experience shamil hai.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="auth.html">Create Account</a>
+          <a class="secondary-btn" href="seller.html">Open Seller Center</a>
+        </div>
+        <ul class="hero-metrics">
+          <li><strong>12k+</strong><span>Mock buyers onboarded</span></li>
+          <li><strong>1.8k</strong><span>Active sellers</span></li>
+          <li><strong>99.2%</strong><span>Fraud detection accuracy</span></li>
+        </ul>
+      </div>
+      <div class="hero-card">
+        <div class="device">
+          <div class="device-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="device-screen">
+            <div class="screen-header">
+              <span>Buyer App</span>
+              <button>Install</button>
+            </div>
+            <div class="screen-banner">
+              <p>Verified marketplace</p>
+              <h2>Original products. Protected sellers. Trusted payments.</h2>
+            </div>
+            <div class="screen-grid">
+              <article>
+                <h3>Seller Center</h3>
+                <p>Inventory, shipping, payouts</p>
+              </article>
+              <article>
+                <h3>Brand Shield</h3>
+                <p>Piracy and counterfeit defense</p>
+              </article>
+              <article>
+                <h3>Dispute Vault</h3>
+                <p>Evidence-backed refund workflow</p>
+              </article>
+              <article>
+                <h3>Escrow Pay</h3>
+                <p>Funds release after delivery verification</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Core Flows</p>
+        <h2>Platform ke major modules ek hi prototype me</h2>
+      </div>
+      <div class="security-grid">
+        <article class="security-card">
+          <span class="tag">Buyer</span>
+          <h3>Search, cart and secure checkout</h3>
+          <p>Catalog browsing, discount campaigns, escrow protected checkout aur order tracking ready structure.</p>
+          <a class="inline-link" href="#marketplace">Explore storefront</a>
+        </article>
+        <article class="security-card">
+          <span class="tag">Seller</span>
+          <h3>Store, listings and payouts</h3>
+          <p>Seller onboarding, add product form, inventory metrics, orders aur payout insights ke sath dashboard.</p>
+          <a class="inline-link" href="seller.html">Open seller page</a>
+        </article>
+        <article class="security-card">
+          <span class="tag">Admin</span>
+          <h3>Moderation and risk review</h3>
+          <p>Product approvals, piracy complaints, dispute resolution aur high-risk sellers ke liye control room.</p>
+          <a class="inline-link" href="admin.html">Open admin page</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="marketplace" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Marketplace Experience</p>
+        <h2>Buyer website aur mobile app dono ke liye ready storefront</h2>
+      </div>
+      <div class="catalog-layout">
+        <aside class="filters">
+          <h3>Discover</h3>
+          <button class="filter-chip active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="fashion">Fashion</button>
+          <button class="filter-chip" data-filter="electronics">Electronics</button>
+          <button class="filter-chip" data-filter="beauty">Beauty</button>
+          <button class="filter-chip" data-filter="home">Home</button>
+          <button class="filter-chip" data-filter="travel">Travel</button>
+        </aside>
+        <div class="products" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Trust Engine</p>
+        <h2>Protected buyer journey ke liye fulfillment aur trust signals</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <strong>Step 1</strong>
+          <p>Seller verification aur KYC complete hone ke baad store activate hota hai.</p>
+        </article>
+        <article>
+          <strong>Step 2</strong>
+          <p>Product moderation duplicate media, fake branding aur risky pricing detect karti hai.</p>
+        </article>
+        <article>
+          <strong>Step 3</strong>
+          <p>Delivery confirm hone par escrow payout release hota hai, warna dispute hold lag jata hai.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="security" class="section security">
+      <div class="section-heading">
+        <p class="eyebrow">Piracy and Security</p>
+        <h2>Platform ko secure rakhne ke liye essential layers</h2>
+      </div>
+      <div class="security-grid">
+        <article class="security-card">
+          <span class="tag">Layer 01</span>
+          <h3>Brand Registry</h3>
+          <p>Original brand owners trademarks, logos aur authorized seller rights register kar sakte hain.</p>
+        </article>
+        <article class="security-card">
+          <span class="tag">Layer 02</span>
+          <h3>Counterfeit Detection</h3>
+          <p>Duplicate images, fake brand names, suspicious pricing aur repeat offenders ke liye automated checks.</p>
+        </article>
+        <article class="security-card">
+          <span class="tag">Layer 03</span>
+          <h3>Escrow Payments</h3>
+          <p>Funds seller ko tab release hon jab delivery confirm ho jaye ya dispute period close ho.</p>
+        </article>
+        <article class="security-card">
+          <span class="tag">Layer 04</span>
+          <h3>Evidence-based Disputes</h3>
+          <p>Buyer photos, courier proof aur chat records ke basis par refund ya seller settlement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap">
+      <div class="section-heading">
+        <p class="eyebrow">Build Roadmap</p>
+        <h2>Prototype se production tak ka implementation path</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <strong>Phase 1</strong>
+          <p>Auth, seller onboarding, product catalog, cart, checkout, orders.</p>
+        </article>
+        <article>
+          <strong>Phase 2</strong>
+          <p>Admin panel, moderation, fraud engine, dispute flows, payout ledger.</p>
+        </article>
+        <article>
+          <strong>Phase 3</strong>
+          <p>Mobile apps, AI recommendations, live campaigns, warehouse integrations.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>SafeSouq demo marketplace concept for web + app.</p>
+    <div class="footer-links">
+      <a href="README.md">Project notes</a>
+      <a href="architecture.md">Architecture</a>
+      <a href="api-spec.md">API spec</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

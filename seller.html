@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Seller Center | SafeSouq</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="seller">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">S</span>
+      <span>
+        <strong>SafeSouq</strong>
+        <small>Seller Center</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Marketplace</a>
+      <a href="seller.html">Seller Hub</a>
+      <a href="admin.html">Admin</a>
+      <a href="auth.html">Auth</a>
+    </nav>
+    <a class="ghost-btn link-btn" href="auth.html">Seller Login</a>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="page-hero compact">
+      <div>
+        <p class="eyebrow">Seller Operations</p>
+        <h1>Apna store, products, orders aur payouts ek jagah se manage karein.</h1>
+      </div>
+      <div class="quick-stats">
+        <div><strong>PKR 3.2M</strong><span>Monthly GMV</span></div>
+        <div><strong>284</strong><span>Orders this week</span></div>
+        <div><strong>4.8/5</strong><span>Store rating</span></div>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel span-2">
+        <div class="panel-head">
+          <h2>Store onboarding status</h2>
+          <span class="status-pill success">Verified</span>
+        </div>
+        <div class="check-grid">
+          <div class="check-item done"><strong>KYC</strong><span>CNIC matched and approved</span></div>
+          <div class="check-item done"><strong>Bank setup</strong><span>Payout IBAN linked</span></div>
+          <div class="check-item done"><strong>Brand proof</strong><span>Authorized reseller docs uploaded</span></div>
+          <div class="check-item warn"><strong>Warehouse</strong><span>Courier SLA pending final review</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Payout summary</h2>
+          <span class="status-pill">Escrow</span>
+        </div>
+        <div class="metric-stack">
+          <div><strong>PKR 420,000</strong><span>Available in 48 hours</span></div>
+          <div><strong>PKR 95,000</strong><span>On dispute hold</span></div>
+          <div><strong>PKR 38,000</strong><span>Platform fee this cycle</span></div>
+        </div>
+      </article>
+
+      <article class="panel span-2">
+        <div class="panel-head">
+          <h2>Add new product</h2>
+          <span class="status-pill">Moderated</span>
+        </div>
+        <form class="form-grid" id="sellerProductForm">
+          <label>
+            Product title
+            <input type="text" name="title" value="Premium Leather Backpack">
+          </label>
+          <label>
+            Category
+            <select name="category">
+              <option>Travel</option>
+              <option>Fashion</option>
+              <option>Electronics</option>
+            </select>
+          </label>
+          <label>
+            Price
+            <input type="text" name="price" value="PKR 8,500">
+          </label>
+          <label>
+            Stock
+            <input type="number" name="stock" value="120">
+          </label>
+          <label class="span-all">
+            Description
+            <textarea rows="5" name="description">Water-resistant premium backpack with laptop sleeve, anti-theft zip and travel-friendly design.</textarea>
+          </label>
+          <div class="span-all form-actions">
+            <button type="button" class="secondary-btn" id="saveDraftBtn">Save draft</button>
+            <button type="submit" class="primary-btn">Submit for approval</button>
+          </div>
+        </form>
+        <p class="form-note" id="sellerFormMessage">New listings moderation queue me jayengi.</p>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Recent orders</h2>
+          <span class="status-pill success">Healthy</span>
+        </div>
+        <div class="list-block">
+          <div class="list-row"><strong>#SQ-4102</strong><span>Paid · In transit</span></div>
+          <div class="list-row"><strong>#SQ-4101</strong><span>Delivered · Payout pending</span></div>
+          <div class="list-row"><strong>#SQ-4098</strong><span>Dispute review</span></div>
+          <div class="list-row"><strong>#SQ-4095</strong><span>Awaiting pickup</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Risk alerts</h2>
+          <span class="status-pill warn">2 open</span>
+        </div>
+        <div class="list-block">
+          <div class="list-row"><strong>Image similarity</strong><span>Listing 2 matches competitor asset</span></div>
+          <div class="list-row"><strong>Price anomaly</strong><span>Discount exceeds category baseline</span></div>
+          <div class="list-row"><strong>Return spike</strong><span>Beauty SKU return rate 18%</span></div>
+        </div>
+      </article>
+
+      <article class="panel span-2">
+        <div class="panel-head">
+          <h2>Draft products</h2>
+          <span class="status-pill">Local demo</span>
+        </div>
+        <div class="list-block" id="sellerDraftList">
+          <div class="list-row"><strong>No draft yet</strong><span>Use the form to create one</span></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Seller demo workspace for SafeSouq.</p>
+    <div class="footer-links">
+      <a href="index.html">Marketplace</a>
+      <a href="admin.html">Admin</a>
+      <a href="api-spec.md">API spec</a>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

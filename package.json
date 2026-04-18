@@ -1,0 +1,10 @@
+{
+  "name": "safesouq-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SafeSouq multi-vendor marketplace starter",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "start": "node backend/src/server.js"
+  }
+}

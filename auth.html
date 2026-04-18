@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Login | SafeSouq</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="auth">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">S</span>
+      <span>
+        <strong>SafeSouq</strong>
+        <small>Access Portal</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Marketplace</a>
+      <a href="seller.html">Seller Hub</a>
+      <a href="admin.html">Admin</a>
+      <a href="auth.html">Login</a>
+    </nav>
+    <a class="ghost-btn link-btn" href="index.html#roadmap">Roadmap</a>
+  </header>
+
+  <main class="auth-wrap">
+    <section class="auth-layout">
+      <article class="auth-card">
+        <p class="eyebrow">Sign in</p>
+        <h1>Buyer, seller ya admin account se login karein.</h1>
+        <form class="form-grid" id="authForm">
+          <label>
+            Email
+            <input type="email" name="email" value="seller@safesouq.test">
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" value="secret123">
+          </label>
+          <label>
+            Role
+            <select name="role">
+              <option>Seller</option>
+              <option>Buyer</option>
+              <option>Admin</option>
+            </select>
+          </label>
+          <label>
+            OTP
+            <input type="text" name="otp" value="246810">
+          </label>
+          <div class="span-all form-actions">
+            <button type="submit" class="primary-btn">Secure login</button>
+            <button type="button" class="secondary-btn" id="createAccountBtn">Create account</button>
+          </div>
+        </form>
+        <p class="form-note" id="authMessage">Seller and admin accounts ke liye 2FA recommended hai.</p>
+      </article>
+
+      <article class="auth-side panel">
+        <div class="panel-head">
+          <h2>Security defaults</h2>
+          <span class="status-pill success">Enabled</span>
+        </div>
+        <div class="list-block">
+          <div class="list-row"><strong>2FA</strong><span>OTP or authenticator app</span></div>
+          <div class="list-row"><strong>Device trust</strong><span>Suspicious login challenge</span></div>
+          <div class="list-row"><strong>Audit logs</strong><span>Every sensitive action tracked</span></div>
+          <div class="list-row"><strong>RBAC</strong><span>Buyer, seller, admin scopes separated</span></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Authentication mockup for SafeSouq.</p>
+    <div class="footer-links">
+      <a href="architecture.md">Architecture</a>
+      <a href="api-spec.md">API spec</a>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
