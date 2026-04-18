@@ -7,8 +7,8 @@ const HOST = "0.0.0.0";
 
 const server = http.createServer((request, response) => {
   route(request, response).catch((error) => {
-    json(response, 500, {
-      error: "Internal server error",
+    json(response, error.statusCode || 500, {
+      error: error.statusCode ? error.message : "Internal server error",
       detail: error.message
     });
   });
